@@ -29,6 +29,10 @@ btn.forEach(item=>{
     item.addEventListener("click",(event)=>{
         if(event.target.className == "numbers"){
             if(num2=="" && operate == ""){
+                if(num1=="ERROR"){
+                    num1=""
+                    output.textContent=""
+                }
                 num1 = num1+item.value
                 console.log(num1)
                 output.textContent = output.textContent +item.value
@@ -61,8 +65,8 @@ btn.forEach(item=>{
             num2="";
             operate=""
             console.log(typeof(result))
-            console.log(result)
-
+            console.log(eval(result))
+            
             
         }
         else if(event.target.id == "ac"){
