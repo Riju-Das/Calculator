@@ -96,16 +96,16 @@ btn.forEach(item=>{
         }
         else if (event.target.id == "del" && output.textContent!="ERROR") {
             if(num2!=""){
-                num2=num2.slice(0,-1)
+                num2=num2.toString().slice(0,-1)
                 if(!num2.toString().includes(".")){
                     document.getElementById("decimal").disabled = false;
                 }
             }
             else if(operate!=""){
-                operate=operate.slice(0,-1)
+                operate=operate.toString().slice(0,-1)
             }
             else if(num1!=""){
-                num1=num1.slice(0,-1)
+                num1=num1.toString().slice(0,-1)
                 if(!num1.toString().includes(".")){
                     document.getElementById("decimal").disabled = false;
                 }
