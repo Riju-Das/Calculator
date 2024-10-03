@@ -29,7 +29,7 @@ btn.forEach(item=>{
     item.addEventListener("click",(event)=>{
         if(event.target.className == "numbers"){
             if(num2=="" && operate == ""){
-                if(num1=="" || item.value!="." && !num1.toString().includes(".")){
+                if(num1=="" || item.value!="." && !num1.toString().includes(".") && num1!=""){
                     document.getElementById("decimal").disabled = false;
                 }
                 if(item.value=="." && !num1.toString().includes(".")){
@@ -96,12 +96,18 @@ btn.forEach(item=>{
         else if (event.target.id == "del" && output.textContent!="ERROR") {
             if(num2!=""){
                 num2=num2.slice(0,-1)
+                if(!num2.toString().includes(".")){
+                    document.getElementById("decimal").disabled = false;
+                }
             }
             else if(operate!=""){
                 operate=operate.slice(0,-1)
             }
             else if(num1!=""){
                 num1=num1.slice(0,-1)
+                if(!num1.toString().includes(".")){
+                    document.getElementById("decimal").disabled = false;
+                }
             }
             output.textContent= output.textContent.slice(0,-1)
         }
