@@ -64,6 +64,7 @@ btn.forEach(item=>{
                 output.textContent=output.textContent+item.value
                 console.log(operate)
             }
+
             
         }
         else if(num1 != "" && operate !="" && num2!="" && event.target.id=="equalto"){
