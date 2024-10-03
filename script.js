@@ -40,7 +40,6 @@ btn.forEach(item=>{
                     output.textContent=""
                 }
                 num1 = num1+item.value
-                console.log(num1)
                 output.textContent = output.textContent +item.value
             }
             else if(num1 != "" && operate !=""){
@@ -52,7 +51,7 @@ btn.forEach(item=>{
                 }
                 num2= num2+item.value
                 output.textContent=output.textContent+item.value
-                console.log(num2)
+                
             }
         }
         else if(event.target.className == "operator" && event.target.id!="equalto"){
@@ -62,7 +61,7 @@ btn.forEach(item=>{
                 }
                 operate = item.value
                 output.textContent=output.textContent+item.value
-                console.log(operate)
+                
             }
 
             
