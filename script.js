@@ -29,8 +29,8 @@ btn.forEach(item=>{
     item.addEventListener("click",(event)=>{
         if(event.target.className == "numbers"){
             if(num2=="" && operate == ""){
-                if(num1=="ERROR"){
-                    num1=""
+                if(output.textContent=="ERROR"){
+                    
                     output.textContent=""
                 }
                 num1 = num1+item.value
@@ -61,7 +61,13 @@ btn.forEach(item=>{
                 result.toFixed(100)
             }
             output.textContent=result
-            num1=result;
+            if(result!="ERROR"){
+                num1=result;
+            }
+            else{
+                num1="";
+            }
+            
             num2="";
             operate=""
             console.log(typeof(result))
@@ -77,7 +83,7 @@ btn.forEach(item=>{
 
 
         }
-        else if (event.target.id == "del") {
+        else if (event.target.id == "del" && output.textContent!="ERROR") {
             if(num2!=""){
                 num2=num2.slice(0,-1)
             }
